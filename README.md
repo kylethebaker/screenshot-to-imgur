@@ -35,7 +35,7 @@ keep that in mind and use the appropriate syntax.
 If you'd like to open the imgur link of the newly uploaded image in a browser immediately
 after the upload finishes, you can set **open_in_browser** to _True_. **browser_command** is the
 command to be executed when the images finished uploading, with %s being a placeholder for
-the imgur link. You don't have to use a browser neccesarily, you can pass the link to any
+the imgur link. You don't have to use a browser necessarily, you can pass the link to any
 arbitrary command line application by defining it in browser_command.
 
 ### logging imgur links to a file
