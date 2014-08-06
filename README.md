@@ -18,7 +18,7 @@ Its a really simple process and this will provide you with your **client_id** an
 
 ### image settings
 
-Next, you'll want to change *image_dir* to the directory you want to save the screenshots in
+Next, you'll want to change **image_dir** to the directory you want to save the screenshots in
 (note the trailing slash). You can also change the **image_name** and **image_title**. Its a 
 good idea to use some sort of timestamp or other unique name for the image_name to prevent
 your screenshot program from overwriting previously saved images.
