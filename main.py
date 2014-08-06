@@ -44,7 +44,7 @@ ss_prog = ['import', '-window', 'root', image_path]
 # do you want to open the image in a browser after its uploaded?
 #
 
-open_in_browser = True
+open_in_browser = False
 browser_command = 'firefox %s'
 
 
@@ -52,7 +52,7 @@ browser_command = 'firefox %s'
 # do you want to log the image title and url to a file for later reference?
 #
 
-log_to_file = True
+log_to_file = False
 log_file = image_dir + 'imgur.upload.log'
 
 
