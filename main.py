@@ -17,8 +17,8 @@ from subprocess import call
 # your imgur api info goes here
 #
 
-client_id = 'your-client-id-here'
-client_secret = 'your-client-secret-here'
+client_id = 'aece57a63fe95f9'
+client_secret = '3add50559f0b5339744dcfff7ed65667f67bb5a4'
 api = "https://api.imgur.com/3/upload.json"
 
 
