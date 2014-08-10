@@ -160,7 +160,7 @@ if log_to_file is True:
 
     try:
         with open(log_file, 'a') as f:
-            f.write('{}\t{}\n'.format(image_title, the_link))
+            f.write('{}\t\t{}\n'.format(image_title, the_link))
 
     except IOError as e:
         print('Can\'t write to the log file', file=sys.stderr)

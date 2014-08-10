@@ -42,7 +42,7 @@ arbitrary command line application by defining it in browser_command.
 
 If you'd like to keep a log of all the uploaded image titles and urls, you can set
 **log_to_file** to _True_. You will need to set the path for the log file in **log_file**. The
-log format is _image_title \<tab\> imgur_url_.
+log format is _image_title \<tab\>\<tab\> imgur_url_.
 
 ## Disclaimer
 
