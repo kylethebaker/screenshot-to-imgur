@@ -4,7 +4,7 @@ import time
 import sys
 
 from base64 import b64encode
-from subprocess import call
+from subprocess import call, Popen, PIPE
 
 
 """''''''''''''''''''''''''''''''''''
@@ -17,8 +17,8 @@ from subprocess import call
 # your imgur api info goes here
 #
 
-client_id = 'your-client-id-here'
-client_secret = 'your-client-secret-here'
+client_id = 'aece57a63fe95f9'
+client_secret = '3add50559f0b5339744dcfff7ed65667f67bb5a4'
 api = "https://api.imgur.com/3/upload.json"
 
 
@@ -47,6 +47,13 @@ ss_prog = ['import', '-window', 'root', image_path]
 open_in_browser = False
 browser_command = 'firefox %s'
 
+#
+# do you want to copy the image url to clipboard after its uploaded?
+#
+
+copy_to_clipboard = True
+clipboard_echo = 'echo %s'
+clipboard_copy = 'xsel -b'
 
 #
 # do you want to log the image title and url to a file for later reference?
@@ -149,6 +156,27 @@ if open_in_browser is True:
     if retcode != 0:
         print('Opening the browser returned an error', file=sys.stderr)
         print('Check browser_command, use %s for imgur url', file=sys.stderr)
+        sys.exit()
+
+
+#
+# copy to clipboard
+#
+
+if copy_to_clipboard is True:
+
+    clipboard_echo = clipboard_echo.replace('%s', the_link)
+
+    echo_call = clipboard_echo.split(' ')
+    copy_call = clipboard_copy.split(' ')
+
+    try:
+        echo_proc = Popen(echo_call, stdout=PIPE)
+        copy_proc = Popen(copy_call, stdin=echo_proc.stdout)
+    except FileNotFoundError as e:
+        print('Can\'t find clipboard program', file=sys.stderr)
+        print('Check clipboard_echo or clipboard_copy', file=sys.stderr)
+        print(e, file=sys.stderr)
         sys.exit()
 
 
