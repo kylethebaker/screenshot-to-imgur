@@ -17,8 +17,8 @@ from subprocess import call, Popen, PIPE
 # your imgur api info goes here
 #
 
-client_id = 'aece57a63fe95f9'
-client_secret = '3add50559f0b5339744dcfff7ed65667f67bb5a4'
+client_id = 'your client it here'
+client_secret = 'your client secret here'
 api = "https://api.imgur.com/3/upload.json"
 
 
